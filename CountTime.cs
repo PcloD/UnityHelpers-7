@@ -21,7 +21,12 @@ public class CountTime
 		
 	public void Reset()
 	{
-		counter = 0;
+		Reset (0);
+	}
+
+	public void Reset(float val)
+	{
+		counter = val;
 	}
 }
 
