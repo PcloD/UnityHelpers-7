@@ -13,6 +13,18 @@ public class CountTime
 {
 	float counter = 0;
 
+	public float Counter{
+		get{
+			return counter;
+		}
+	}
+
+	public CountTime(){}
+	public CountTime(float time)
+	{
+		counter = time;
+	}
+
 	public bool Count(float to)
 	{
 		counter+=Time.deltaTime;

@@ -10,7 +10,10 @@ public class NumericFieldController : MonoBehaviour {
 	float Speed = 1000;
 	public float TimeToEquality = 1;
 	Text text;
+
+	[StoreThis]
 	int fieldValue = 0;
+
 	float displayedValue = 0;
 
 	public bool runMode = true;
@@ -31,6 +34,13 @@ public class NumericFieldController : MonoBehaviour {
 		displayedValue = 0;
 		UpdateSpeed();
 	}
+
+	[ExecuteAfterLoad]
+	void OnDeserialized()
+	{
+		UpdateSpeed();
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if(displayedValue!=fieldValue)
