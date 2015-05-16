@@ -67,8 +67,11 @@ public class NumericFieldController : MonoBehaviour {
 			return fieldValue;
 		}
 		set{
-			fieldValue = value;
-			UpdateSpeed();
+			if(value!=fieldValue)
+			{
+				fieldValue = value;
+				UpdateSpeed();
+			}
 		}
 	}
 	public void AddValue(int delta)
